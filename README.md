@@ -25,7 +25,7 @@ Este paquete verifica la validez del número de cédula en función de los códi
 
 - Validar números de identificación nacional nicaragüenses (16 dígitos con guiones o 14 dígitos sin guiones).
 - Verificar los códigos de municipio con una lista predefinida.
-- Validar el formato de la fecha de nacimiento (AAMMDD).
+- Validar el formato de la fecha de nacimiento (ddmmyy).
 - Calcular la letra final basada en el número de identificación para verificar que sea correcta.
 - De manera adicional, cuenta con 2 funciones adicionales:
   - Mostrar una lista de los departamentos
