@@ -126,7 +126,7 @@ console.log(result); // { valid: true, message: 'La cédula es válida.' }
 #### Funciones adicionales
 
 ```javascript
-import { validate } from 'nicaraguan-dni-validator'
+import { listDepartments, listMunicipalities } from 'nicaraguan-dni-validator'
 
 // Listar todos los departamentos
 const departamentos = listDepartments();
