@@ -1,9 +1,9 @@
 # Validador de Número de Identificación Nacional de Nicaragua
 
 - [Validador de Número de Identificación Nacional de Nicaragua](#validador-de-número-de-identificación-nacional-de-nicaragua)
-  - [Funcionalidades](#funcionalidades)
+  - [Resumen de Funcionalidades](#resumen-de-funcionalidades)
   - [Instalación](#instalación)
-  - [Funciones](#funciones)
+  - [Funciones que puedes utilizar](#funciones-que-puedes-utilizar)
     - [`validate(id: string): string`](#validateid-string-string)
     - [`listDepartments(): string[]`](#listdepartments-string)
     - [`listMunicipalities(department: string): object[]`](#listmunicipalitiesdepartment-string-object)
@@ -21,7 +21,7 @@ Este es un paquete en `javascript` para validar números de identificación Nica
 
 Este paquete verifica la validez del número de cédula en función de los códigos de municipio, el formato de la fecha de nacimiento y una letra final calculada utilizando el algoritmo de módulo 23.
 
-## Funcionalidades
+## Resumen de Funcionalidades
 
 - Validar números de identificación nacional nicaragüenses (16 dígitos con guiones o 14 dígitos sin guiones).
 - Verificar los códigos de municipio con una lista predefinida.
@@ -43,7 +43,7 @@ Para instalar el paquete, usa npm:
 npm install nicaraguan-dni-validator
 ```
 
-## Funciones
+## Funciones que puedes utilizar
 
 ### `validate(id: string): string`
 
