@@ -1,10 +1,9 @@
-# Validador de Número de Identificación Nacional de Nicaragua
+# Validador de Número de Cédula de Nicaragua
 
-- [Validador de Número de Identificación Nacional de Nicaragua](#validador-de-número-de-identificación-nacional-de-nicaragua)
-  - [Resumen de Funcionalidades](#resumen-de-funcionalidades)
+- [Validador de Número de Cédula de Nicaragua](#validador-de-número-de-cédula-de-nicaragua)
   - [Instalación](#instalación)
-  - [Funciones que puedes utilizar](#funciones-que-puedes-utilizar)
-    - [`validate(id: string): string`](#validateid-string-string)
+  - [Funciones](#funciones)
+    - [`validate(id: string, verbose?: boolean): boolean || object{}`](#validateid-string-verbose-boolean-boolean--object)
     - [`listDepartments(): string[]`](#listdepartments-string)
     - [`listMunicipalities(department: string): object[]`](#listmunicipalitiesdepartment-string-object)
   - [Uso](#uso)
@@ -17,17 +16,13 @@
     - [Desarrollo](#desarrollo)
   - [Licencia](#licencia)
 
-Este es un paquete en `javascript` para validar números de identificación Nicaragua o mejor dicho cédula de identidad.
+Este es un paquete que sirve para validar números de cédula de Nicaragua., verificando la validez en función de los códigos de municipio, la fecha de nacimiento y una letra final calculada utilizando el algoritmo de módulo 23.
 
-Este paquete verifica la validez del número de cédula en función de los códigos de municipio, el formato de la fecha de nacimiento y una letra final calculada utilizando el algoritmo de módulo 23.
-
-## Resumen de Funcionalidades
-
-- Validar números de identificación nacional nicaragüenses (16 dígitos con guiones o 14 dígitos sin guiones).
+- Valida números de cédula (16 dígitos con guiones o 14 dígitos sin guiones).
 - Verificar los códigos de municipio con una lista predefinida.
 - Validar el formato de la fecha de nacimiento (ddmmyy).
-- Calcular la letra final basada en el número de identificación para verificar que sea correcta.
-- De manera adicional, cuenta con 2 funciones adicionales:
+- Calcular la letra final basada en los números de la cédula para verificar que sea correcta.
+- También, cuenta con 2 funciones adicionales:
   - Mostrar una lista de los departamentos
   - Mostrar listado de los municipios (todos o filtrado por departamento).
 
@@ -43,13 +38,15 @@ Para instalar el paquete, usa npm:
 npm install nicaraguan-dni-validator
 ```
 
-## Funciones que puedes utilizar
+## Funciones
 
-### `validate(id: string): string`
+### `validate(id: string, verbose?: boolean): boolean || object{}`
 
-Valida el número de identificación nacional de Nicaragua (cédula) proporcionado. Devuelve un mensaje indicando si la cédula es válida o la razón por la que es inválida.
+Valida el numero de cédula proporcionado.
 
-**Parámetros**
+Según el modo, devuelve `true` o `false`, o, puede incluir un objeto que agrega un mensaje relacionado a la validación.
+
+**Parámetros:**
 
 - `id` (string, obligatorio): La cédula a validar.
 
@@ -61,7 +58,7 @@ Devuelve una lista de todos los departamentos en Nicaragua.
 
 ### `listMunicipalities(department: string): object[]`
 
-Devuelve una lista de municipios para el departamento especificado. Si no se proporciona un departamento o si el departamento no existe, devuelve todos los municipios.
+Devuelve una lista de municipios para el departamento especificado. Si no se proporciona un departamento o si el departamento no existe, devuelve ub objeto que contiene el código de municipio, el nombre del municipio, y el departamento al que pertenece ese municipio.
 
 **Parámetros:**
 
@@ -69,7 +66,7 @@ Devuelve una lista de municipios para el departamento especificado. Si no se pro
 
 ## Uso
 
-Importa el paquete en tu archivo y llama a la función `validate` pasando como argumento la cédula a validar.
+Importar el paquete en tu archivo y llama a la función `validate` pasando como argumento la cédula a validar.
 
 Opcionalmente, puedes activar el parámetro `verbose` para recibir mensajes detallados.
 
@@ -80,7 +77,7 @@ Opcionalmente, puedes activar el parámetro `verbose` para recibir mensajes deta
 ```javascript
 import { validate } from 'nicaraguan-dni-validator'
 
-const isValid = validateDNI('001-280201-0000X'); // Modo silencioso (por defecto)
+const isValid = validate('001-280201-0000X'); // Modo silencioso (por defecto)
 console.log(isValid); // true o false
 ```
 
@@ -139,14 +136,12 @@ console.log(municipios);
 
 ## Información sobre el Desarrollador
 
-Este paquete es mantenido por ***Juan José Zeledón Benavides***
-
-[LinkedIn](https://www.linkedin.com/in/juanjzb/)
+Este paquete es mantenido por [Juan José Zeledón Benavides](https://www.linkedin.com/in/juanjzb/)
 
 Para contribuciones o reportar problemas, puedes comunicarte a través de los siguientes medios:
 
-- GitHub: [juanjzb](https://github.com/juanjzb)
-- Email: [zb.juanjose@gmail.com](mailto:zb.juanjose@gmail.com)
+- [Github: juanjzb](https://github.com/juanjzb)
+- [email: zb.juanjose@gmail.com](mailto:zb.juanjose@gmail.com)
 
 ### Desarrollo
 

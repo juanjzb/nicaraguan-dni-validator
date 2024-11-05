@@ -1,7 +1,7 @@
 {
   "name": "nicaraguan-dni-validator",
   "description": "A package to validate Nicaraguan DNI. Un paquete para validar cedulas Nicaragüenses",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "author": "Juan Jose Zeledon Benavides",
   "main": "index.js",
   "keywords": [
