@@ -1,6 +1,22 @@
 import MUNICIPALITIES from '../data/municipalities.js'
 import { calculateLetter } from './calculateLetter.js'
 import isValidBirthDate from './isValidBirthDate.js'
+/**
+ * The function `validate` checks the validity of a given identification number in JavaScript,
+ * providing detailed error messages if needed.
+ * @param id - The `id` parameter in the `validate` function represents the identification number
+ * (cédula) that you want to validate. It should be a string containing either 14 digits (without
+ * dashes) or 16 characters (with dashes included). The function checks the validity of this
+ * identification number based on
+ * @param [verbose=false] - The `verbose` parameter in the `validate` function is a boolean parameter
+ * that determines whether the function should return detailed information about the validation result
+ * or just a simple boolean value indicating whether the ID is valid or not. If `verbose` is set to
+ * `true`, the function will return an object containing
+ * @returns The `validate` function returns either a detailed result object containing validation
+ * information (if `verbose` is set to `true`) or a boolean value indicating whether the ID is valid or
+ * not (if `verbose` is set to `false`).
+ */
+
 const validate = (id, verbose = false) => {
   if (!id) {
     const result = { valid: false, message: 'Se debe proporcionar una cédula.' }
