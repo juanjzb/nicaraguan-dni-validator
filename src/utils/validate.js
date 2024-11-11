@@ -1,9 +1,7 @@
-import MUNICIPALITIES from './../data/municipalities.js'
-import calculateLetter from './calculateLetter.js'
+import MUNICIPALITIES from '../data/municipalities.js'
+import { calculateLetter } from './calculateLetter.js'
 import isValidBirthDate from './isValidBirthDate.js'
-function validateDNI (id, verbose = false) {
-  const letters = 'ABCDEFGHJKLMNPQRSTUVWXY'
-
+const validate = (id, verbose = false) => {
   if (!id) {
     const result = { valid: false, message: 'Se debe proporcionar una cédula.' }
     return verbose ? result : false
@@ -64,4 +62,4 @@ function validateDNI (id, verbose = false) {
   return verbose ? result : true
 }
 
-export default validateDNI
+export default validate
