@@ -1,6 +1,6 @@
-# Validador de Número de Cédula de Nicaragua
+# Validador de Número de Cédula de Nicaragua (nicaraguan-dni-validator)
 
-- [Validador de Número de Cédula de Nicaragua](#validador-de-número-de-cédula-de-nicaragua)
+- [Validador de Número de Cédula de Nicaragua (nicaraguan-dni-validator)](#validador-de-número-de-cédula-de-nicaragua-nicaraguan-dni-validator)
   - [Instalación](#instalación)
   - [Funciones](#funciones)
     - [`validate(id: string, verbose?: boolean): boolean || object{}`](#validateid-string-verbose-boolean-boolean--object)
@@ -13,7 +13,7 @@
         - [Ejemplos de mensajes de error con `verbose: true`](#ejemplos-de-mensajes-de-error-con-verbose-true)
       - [Funciones adicionales](#funciones-adicionales)
   - [Información sobre el Desarrollador](#información-sobre-el-desarrollador)
-    - [Desarrollo](#desarrollo)
+    - [Contribuciones](#contribuciones)
   - [Licencia](#licencia)
 
 Este es un paquete que sirve para validar números de cédula de Nicaragua., verificando la validez en función de los códigos de municipio, la fecha de nacimiento y una letra final calculada utilizando el algoritmo de módulo 23.
@@ -143,9 +143,9 @@ Para contribuciones o reportar problemas, puedes comunicarte a través de los si
 - [Github: juanjzb](https://github.com/juanjzb)
 - [email: zb.juanjose@gmail.com](mailto:zb.juanjose@gmail.com)
 
-### Desarrollo
+### Contribuciones
 
-Para contribuir a este proyecto, haz un `fork` del proyecto y envía la `pull request`.
+Para contribuir a este proyecto, haz un `fork` del proyecto, crea una nueva rama con tus cambios, y envía la `pull request`.
 
 El enlace del repositorio es: `https://github.com/juanjzb/nicaraguan-dni-validator.git`
 
